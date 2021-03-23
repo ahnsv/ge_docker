@@ -1,0 +1,23 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "rice_production.expectation",
+  "expectations": [],
+  "meta": {
+    "citations": [
+      {
+        "batch_kwargs": {
+          "data_asset_name": "rice_production",
+          "datasource": "database-ge_docker",
+          "limit": 1000,
+          "schema": "public",
+          "table": "rice_production"
+        },
+        "batch_markers": null,
+        "batch_parameters": null,
+        "citation_date": "20210323T143739.832605Z",
+        "comment": "New suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.13.14"
+  }
+}

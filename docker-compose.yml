@@ -1,0 +1,23 @@
+version: '3.8'
+services: 
+  expectations:
+    build: '.'
+    container_name: ge_docker--expectations
+    ports: 
+      - 8888:8888
+    volumes: 
+      - $PWD/great_expectations:/usr/app/great_expectations
+  
+  database:
+    image: postgres:9.6-alpine
+    container_name: ge_docker--database
+    ports: 
+      - 5432:5432
+    volumes: 
+      - $PWD/data:/docker-entrypoint-initdb.d/
+    environment: 
+      - POSTGRES_PASSWORD=ge_docker
+      - POSTGRES_USER=ge_docker
+      - POSTGRES_DB=test
+
+      
